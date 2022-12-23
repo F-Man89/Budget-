@@ -1,1 +1,19 @@
+# Initialize variables to track income and expenses
+income = 0
+expenses = []
+
+# Input amount of earned money
+income = float(input("Enter your monthly income: "))
+
+# Input list of expenses
+expense = input("Enter an expense (or press Enter to finish): ")
+while expense:
+  expenses.append(float(expense))
+  expense = input("Enter an expense (or press Enter to finish): ")
+
+# Calculate the rest of money
+remaining = income - sum(expenses)
+
+# Print the result
+print(f"Your remaining budget for the month is ${remaining:.2f}.")
 
